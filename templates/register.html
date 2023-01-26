@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script>
+      function popup(){
+          var url = "road.html";
+          var name = "popup test";
+          var option = "width = 500, height = 500, top = 100, left = 200, location = no"
+          window.open(url, name, option);
+      }
+  </script>
+    <title>꿀단지 세상 | 회원가입 </title>
+    
+    <style>
+        .mytitle {
+            color: black;
+            width: 300px;
+            height: 200px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/5265/5265349.png');
+            background-position: center;
+            background-size: cover;
+            margin-left: 500px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 40px;
+        }
+    </style>
+
+<script>
+  temp = location.href.split("?");
+  data=temp[1].split("/");
+  chatChannelId = data[0];
+  chatChannelName = data[1];
+  videoChatName = data[2];
+  document.writｅ(chatChannelId + " " + chatChannelName + " " + videoChatName);   //페이지에 전달받은 값 띄워서 확인하기 
+  console.log("TAGTAG : " + chatChannelId +", " + chatChannelName + ", " + videoChatName);    //콘솔에 전달받은 값 띄워서 확인하기
+</script>    
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1> 회원가입 </h1>
+        <h5> 개인정보는 입력하지 말아주세요 </h5>
+        <h5> 주인장이 해킹할지도...</h5>
+    </div>
+    <div class="wrap">
+        <div class="card mx-auto" style="max-width: 480px">
+          <div class="card-body">
+            <div>
+              <div class="form-group row">
+                <label for="inputID" class="col-sm-4 col-form-label"
+                  >아이디</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputID"
+                    placeholder="아이디"
+                  />
+                  <!--                                <small id="nicknameHelp" class="form-text text-muted">닉네임을 입력해주세요.</small>-->
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                <label for="inputPwd1" class="col-sm-4 col-form-label"
+                  >비밀번호</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPwd1"
+                    placeholder="영문과 숫자로 6자리 이상"
+                  />
+                  <!--                                <small id="passwordHelp1" class="form-text text-muted">영문과 숫자로 6자리 이상 입력해주세요.</small>-->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPwd2" class="col-sm-4 col-form-label"
+                  >비밀번호 확인</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPwd2"
+                    placeholder="비밀번호 재입력"
+                  />
+                  <!--                                <small id="passwordHelp2" class="form-text text-muted">비밀번호를 다시 입력해주세요.</small>-->
+                 </div>
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                  <label for="inputUserName" class="col-sm-4 col-form-label"
+                    >이름</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputUserName"
+                      placeholder="이름"
+                    />
+                  </div>
+              </div>
+  
+              <div class="form-group row">
+                <label for="inputUserEmail" class="col-sm-4 col-form-label"
+                  >이메일</label
+                >
+                <div class="col-sm-8">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputUserEmail"
+                      placeholder="email@email.com"
+                    />
+                    <!--                                    <div class="input-group-append">-->
+                    <!--                                        <button class="btn btn-outline-sparta" type="button">중복확인</button>-->
+                    <!--                                    </div>-->
+                  </div>
+  
+                  <!--                                <small id="emailHelp" class="form-text text-muted">입력 후 중복확인 버튼을 클릭해주세요.</small>-->
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                  <label for="inputUserPhone" class="col-sm-4 col-form-label"
+                    >전화</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputUserPhone"
+                      placeholder="전화번호"
+                    />
+                  </div>
+              </div>
+  
+              <div class="form-group row">
+                  <label for="inputUserAddress" class="col-sm-4 col-form-label"
+                    >집주소</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputUserAddress"
+                      onclick="popup()"
+                      placeholder="도로명주소, 지번주소"
+                    />
+                  </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputUserAddress" class="col-sm-4 col-form-label"
+                  ></label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputUserAddress"
+                    onclick="popup()"
+                    placeholder="상세 주소지 입력"
+                  />
+                </div>
+            </div>
+  
+            <div class="row d-flex justify-content-around mt-3">
+              <div class="col-6 pr-2">
+                <button
+                  type="button"
+                  class="btn btn-sparta btn-block"
+                  onclick="sign_up()"
+                >
+                  회원가입
+                </button>
+              </div>
+              <div class="col-6 pl-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-sparta btn-block"
+                  onclick="window.location.href='/'"
+                >
+                  취소
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</body>
+
+</html>
