@@ -4,10 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 실무에서는 jquery 자동최신버전 쓰면 안됨.. 항상 물어보고 사용하기 -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">   
+
+    <script>
+        $(document).ready(function(){
+             $(".register").click(function(){
+                $(".popup_bg").css({"display": "block"});
+             })
+
+             $(".register_btn").click(function(){
+                $(".popup_bg").css({"display":"none"});
+             })
+
+             $(".hover").hover(function(){
+                $(this).css({
+                    "background":"rgba(0,0,0,0.7)",
+                    "transition":"0.7s"
+                })
+             }, function(){
+                $(this).css({
+                    "background":"none",
+                    "transition":"0.5s"
+                })
+             })
+        });
+
+
+    </script>
     <title>꿀단지 개발소</title>
 
 </head>
@@ -15,6 +43,7 @@
 <body>
     
     <div class="wrap">
+
         <div class="intro_bg">
             <div class="header" id="link_header">
                 <div class="search_area">
@@ -25,10 +54,10 @@
                 </div>
 
                 <ul class="nav">
-                    <li><a href="#link_header">Home</a></li>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#link_main_text0">About</a></li>
+                    <li class="hover"><a href="#link_header">Home</a></li>
+                    <li class="hover"><a href="#">로그인</a></li>
+                    <li class="register">회원가입</li>
+                    <li class="hover"><a href="#link_main_text0">About</a></li>
                 </ul>
             </div>
             <div class="intro_text">
@@ -36,34 +65,49 @@
                 <h4 class="contents1"> 테스트 및 개발하는 곳입니다</h4>
             </div>
         </div>
+
         <!-- intro end-->
+
         <ul class="amount">
             <li>
                 <div>
-                    <div class="contents1">ㅎㅎ</div>
-                    <div class="contents2">ㅎㅎ</div>
+                    <div class="contents1">김범석 회원님 </div>
+                    <div class="contents2">반갑습니다</div>
                 </div>
             </li>
             <li>
                 <div>
-                    <div class="contents1">ㅎㅎ</div>
-                    <div class="contents2">ㅎㅎ</div>
+                    <div class="contents1">내 포인트</div>
+                    <div class="contents2">100000</div>
                 </div>
             </li>
             <li>
                 <div>
-                    <div class="contents1">ㅎㅎ</div>
-                    <div class="contents2">ㅎㅎ</div>
+                    <div class="contents1">등급</div>
+                    <div class="contents2">관리자</div>
                 </div>
             </li>
             <li>
                 <div>
-                    <div class="contents1">ㅎㅎ</div>
-                    <div class="contents2">ㅎㅎ</div>
+                    <div class="contents1">내 프로필</div>
+                    <div class="contents2">바로가기</div>
                 </div>
             </li>
         </ul>
+
         <!-- amount end-->
+
+
+        <div class="popup_bg">
+            <div class="popup">
+                <div class="register_btn">
+                            닫기 
+                </div>
+            </div>    
+        </div>
+    
+        <!-- popup_bg end(register)-->
+        
 
         <div class="main_text0" id="link_main_text0">
             <h1>About</h1>
@@ -76,25 +120,25 @@
                         <img src="../static/img/icon_board.jpg">
                     </div>
                     <div class="contents1_bold"> 방명록 </div>
-                    <div class="contents3"> 인사하고 가세요 ㅎㅎ!!</div>
+                    <div class="contents3"> 안녕하세요 반가워요 인사하고가요 !!</div>
                     <div class="click"> 클릭하기 </div>
                 </li>
                 <li>
                     <div class="icon_img">
                          <!-- 아이콘 이미지크기 width:136.11 height:127.66 -->
-                        <img src="../static/img/icon_board.jpg">
+                        <img src="../static/img/icon_todolist.jpg">
                     </div>
-                    <div class="contents1_bold"> 방명록 </div>
-                    <div class="contents3"> 인사하고 가세요 ㅎㅎ!!</div>
+                    <div class="contents1_bold"> TodoList </div>
+                    <div class="contents3"> 내 할일을 적어볼까요 </div>
                     <div class="click"> 클릭하기 </div>
                 </li>
                 <li>
                     <div class="icon_img">
                          <!-- 아이콘 이미지크기 width:136.11 height:127.66 -->
-                        <img src="../static/img/icon_board.jpg">
+                        <img src="../static/img/icon_movie.jpg">
                     </div>
-                    <div class="contents1_bold"> 방명록 </div>
-                    <div class="contents3"> 인사하고 가세요 ㅎㅎ!!</div>
+                    <div class="contents1_bold"> 영화리뷰 </div>
+                    <div class="contents3"> 가장 재밌게 본 영화 알려주세요</div>
                     <div class="click"> 클릭하기 </div>
                 </li>
             </ul>
