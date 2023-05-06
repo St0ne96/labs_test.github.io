@@ -8,8 +8,10 @@ const usercontroller = new Usercontroller();
 
 
 // 임시 테스트 회원가입 구현 
-router.get("/customeruser", usercontroller.getUsers);
-router.post("/customeruser", usercontroller.createUser);
+router.get("/register", usercontroller.getUsers);
+router.post("/register", usercontroller.createUser);
 
+// 손님 메인 페이지 
+router.get("/user", usercontroller.getUserById);
 
 module.exports = router;
